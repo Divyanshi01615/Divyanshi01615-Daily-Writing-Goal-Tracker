@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Writing Calendar</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calendar-container">
+        <div class="calendar">
+            <div class="calendar-header">
+                <button id="prevMonth" class="nav-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+                </button>
+                <h2 id="monthDisplay"></h2>
+                <button id="nextMonth" class="nav-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+                </button>
+            </div>
+            <div class="weekdays">
+                <div>Sun</div>
+                <div>Mon</div>
+                <div>Tue</div>
+                <div>Wed</div>
+                <div>Thu</div>
+                <div>Fri</div>
+                <div>Sat</div>
+            </div>
+            <div id="calendar" class="days"></div>
+        </div>
+
+        <div id="eventModal" class="modal">
+            <div class="modal-content">
+                <h3>Add Event</h3>
+                <form id="eventForm">
+                    <input type="text" id="eventTitle" placeholder="Event title" required>
+                    <select id="eventType">
+                            <option value="writing">Writing Session</option>
+                            <option value="deadline">Deadline</option>
+                            <option value="birthday">Birthday</option>
+                            <option value="anniversary">Anniversary</option>
+                            <option value="family_reunion">Family Reunion</option>
+                            <option value="vacation">Vacation</option>
+                            <option value="social_gathering">Social Gathering</option>
+                            <option value="work_meeting">Work Meeting</option>
+                            <option value="project_deadline">Project Deadline</option>
+                            <option value="business_trip">Business Trip</option>
+                            <option value="networking_event">Networking Event</option>
+                            <option value="training_session">Training Session</option>
+                            <option value="workout_session">Workout Session</option>
+                            <option value="doctor_appointment">Doctor's Appointment</option>
+                            <option value="meditation_class">Meditation Class</option>
+                            <option value="wellness_checkup">Wellness Check-up</option>
+                            <option value="spa_day">Spa Day</option>
+                            <option value="class_schedule">Class Schedule</option>
+                            <option value="study_session">Study Session</option>
+                            <option value="exam_date">Exam Date</option>
+                            <option value="workshop">Workshop</option>
+                            <option value="educational_seminar">Educational Seminar</option>
+                            <option value="public_holiday">Public Holiday</option>
+                            <option value="religious_festival">Religious Festival</option>
+                            <option value="national_celebration">National Celebration</option>
+                            <option value="cultural_event">Cultural Event</option>
+                            <option value="seasonal_festival">Seasonal Festival</option>
+                            <option value="concert">Concert</option>
+                            <option value="movie_night">Movie Night</option>
+                            <option value="sporting_event">Sporting Event</option>
+                            <option value="hobby">Hobby</option>
+                            <option value="weekend_trip">Weekend Trip</option>
+                    </select>
+                    <div class="button-container">
+                        <button type="button" id="cancelButton">Cancel</button>
+                        <button type="submit" class="submit-button">Add Event</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
